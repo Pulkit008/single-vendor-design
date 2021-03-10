@@ -1,0 +1,27 @@
+#homePageCarousel button {
+    background-color: transparent !important;
+    border: none;
+}
+#support-section div div a {
+    text-decoration: none;
+}
+
+#best-selling-section {
+    background-image: url('../img/home/best-selling-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#best-selling-section div div div div a {
+    text-decoration: none;
+}
+
+.btnColor {
+    background-color: var(--themeColor);
+}
+
+.brand-card {
+    background-color: #f3f3f3;
+    border-radius: 8px;
+}

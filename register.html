@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/loginPage.css">
+
+    <title>Register</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <!-- <a class="navbar-brand ms-5" href="#">
+                    <img src="./img/logo.png" alt="" width="160">
+                </a> -->
+                <h1 class="ms-5 fw-bold text-white">Galaxy</h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav text-center">
+                        <!-- <li class="nav-item mx-5">
+                            <a class="nav-link fw-bold active" aria-current="page" href="/">Join a Race</a>
+                        </li>
+                        <li class="nav-item mx-5">
+                            <a class="nav-link fw-bold" href="/leadershipBoard">Leaderboard</a>
+                        </li> -->
+                    </ul>
+                    <div class="d-flex justify-content-center mx-5">
+                        <a href="login.html" class="loginBtn px-5 btn btn-light fw-bold" style="font-size: 20px;">Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="hero-header-section">
+        <div class="container-fluid mt-5">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-5 d-none d-md-block d-lg-block d-xl-block d-xxl-block">
+                    <img id="forgotPasswordImg" class="img-fluid" src="img/login/register.svg" alt="">
+                </div>
+                <div class="col-11 col-sm-10 col-md-6 col-lg-5 mb-5 offset-lg-1">
+                    <form onsubmit="return userRegisterValidate('userName', 'msg1', 'userEmail', 'msg2', 'userMobile', 'msg3', 'userPassword', 'msg4', 'confirmPassword', 'msg5')" class="mt-5">
+                        <h1 class="fw-bold mb-5">Register</h1>
+                        <div class="row">
+                            <div class="col-12 col-md-9 col-lg-9">
+                                <div class="mb-1">
+                                    <label for="userName" class="form-label text-uppercase fw-bold">Name</label>
+                                    <input type="text" class="form-control" id="userName"
+                                        onfocusout="namevalidation('userName','msg1')">
+                                    <div id="msg1" class="error-text">&nbsp;</div>
+                                </div>
+                                <div class="text-center fs-5">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="userMale"
+                                            value="Male" checked>
+                                        <label class="form-check-label" for="userMale">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="userFemale"
+                                            value="Female">
+                                        <label class="form-check-label" for="userFemale">Female</label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="userEmail" class="form-label text-uppercase fw-bold">E-Mail</label>
+                                    <input type="text" class="form-control" id="userEmail"
+                                        onfocusout="emailvalidation('userEmail','msg2')">
+                                    <div id="msg2" class="error-text">&nbsp;</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="userMobile" class="form-label text-uppercase fw-bold">Mobile</label>
+                                    <input type="text" class="form-control" id="userMobile"
+                                        onfocusout="mobilevalidation('userMobile','msg3')">
+                                    <div id="msg3" class="error-text">&nbsp;</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="userPassword" class="form-label text-uppercase fw-bold">Password</label>
+                                    <input type="password" class="form-control" id="userPassword"
+                                        onfocusout="passwordvalidation('userPassword','msg4')">
+                                    <div id="msg4" class="error-text">&nbsp;</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="confirmPassword" class="form-label text-uppercase fw-bold">Confirm
+                                        Password</label>
+                                    <input type="password" class="form-control" id="confirmPassword"
+                                        onfocusout="cpasswordvalidation('userPassword','confirmPassword','msg5')">
+                                    <div id="msg5" class="error-text">&nbsp;</div>
+                                </div>
+
+                                <button type="submit" class="btn landing-page-btn text-white fs-5 py-2 w-100">REGISTER</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3 fw-bold">
+            <a href="" class="mx-4 text-white">Galaxy 2021</a>
+            <a href="" class="mx-4 text-white">About Us</a>
+            <a href="" class="mx-4 text-white">Privacy Policy</a>
+            <a href="" class="mx-4 text-white">Tutorials</a>
+            <a href="" class="mx-4 text-white">Terms of Service</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <script src="js/validation.js"></script>
+
+</body>
+
+</html>

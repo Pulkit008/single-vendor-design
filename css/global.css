@@ -1,0 +1,30 @@
+:root {
+    --themeColor: #33A0D9;
+    --footerColor: #2180B2;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+nav {
+    background-color: var(--themeColor);
+}
+
+footer {
+    background-color: var(--footerColor);
+}
+
+footer div a {
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link {
+    font-size: 20px;
+}
